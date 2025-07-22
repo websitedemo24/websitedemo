@@ -22,6 +22,16 @@ a {
   top: 0;
   z-index: 999;
 }
+.logo {
+  display: flex;
+  align-items: left;
+  gap: 8px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff4081;
+  font-family: "Arial Black", sans-serif;
+  cursor: default;
+}
 
 .logo {
   font-size: 26px;
@@ -271,4 +281,44 @@ a {
   font-weight: bold;
   margin-top: 0.2rem;
 }
+
+.footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', sans-serif;
+  gap: 10px;
+  border-top: 3px solid #ff4081;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ff4081;
+  cursor: default;
+}
+
+.footer-logo svg {
+  display: block;
+}
+
+.footer-nav a {
+  color: #fff;
+  margin-left: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #ff4081;
+}
+
 
