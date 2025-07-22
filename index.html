@@ -3,143 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anime Clothing Shop</title>
+  <title>AnimeStyle Shop</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="topbar">
-    <div class="logo">AnimeStyle</div>
-    <nav class="main-nav">
-      <a href="#">Startseite</a>
-      <a href="#">Produkte</a>
-      <a href="#">Über uns</a>
-      <div class="dropdown">
-        <button class="dropbtn">Konto</button>
-        <div class="dropdown-content">
-          <a href="#">Login</a>
-          <a href="#">Registrieren</a>
-        </div>
-      </div>
+  <!-- Header mit Navigation -->
+  <header class="main-header">
+    <div class="logo">ANIMECLOTH</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Startseite</a></li>
+        <li><a href="#">Über uns</a></li>
+        <li class="dropdown">
+  <a href="#">Konto ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Registrieren</a></li>
+    <li><a href="#">Mein Konto</a></li>
+  </ul>
+</li>
+
+
+        </li>
+      </ul>
     </nav>
   </header>
 
   <!-- Slideshow -->
-  <section class="slideshow-container">
-    <div class="slide fade">
-      <img src="images/slide1.jpg" alt="Slide 1" />
-    </div>
-    <div class="slide fade">
-      <img src="images/slide2.jpg" alt="Slide 2" />
-    </div>
-    <div class="slide fade">
-      <img src="images/slide3.jpg" alt="Slide 3" />
+  <section class="slideshow">
+    <div class="slideshow-wrapper">
+      <div class="slideshow-slide active">
+        <img src="images/slide1.jpg" alt="Anime Style 1" />
+      </div>
+      <div class="slideshow-slide">
+        <img src="images/slide2.jpg" alt="Anime Style 2" />
+      </div>
+      <div class="slideshow-slide">
+        <img src="images/slide3.jpg" alt="Anime Style 3" />
+      </div>
     </div>
   </section>
 
- <!-- Bestseller Bereich -->
-<section class="product-section">
-  <div class="section-frame">
-    <h2 class="section-title">🔥 BESTSELLER 🔥</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Sakura Tee" />
-        <p class="product-name">Sakura Tee</p>
-        <p class="product-price">€29.99</p>
-      </div>
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Shinigami Hoodie" />
-        <p class="product-name">Shinigami Hoodie</p>
-        <p class="product-price">€49.99</p>
-      </div>
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Senpai Shirt" />
-        <p class="product-name">Senpai Shirt</p>
-        <p class="product-price">€24.99</p>
-      </div>
-	   <div class="product">
-        <img src="images/tanjiro.jpg" alt="Senpai Shirt" />
-        <p class="product-name">Senpai Shirt</p>
-        <p class="product-price">€24.99</p>
-      </div>
-    </div>
-  </div>
-</section>
-
- <!-- Neue Ware Bereich -->
-<section class="product-section">
-  <div class="section-frame">
-    <h2 class="section-title">🔥 NEU 🔥</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Sakura Tee" />
-        <p class="product-name">Sakura Tee</p>
-        <p class="product-price">€29.99</p>
-      </div>
-	  <div class="product">
-        <img src="images/tanjiro.jpg" alt="Sakura Tee" />
-        <p class="product-name">Sakura Tee</p>
-        <p class="product-price">€29.99</p>
-      </div>
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Shinigami Hoodie" />
-        <p class="product-name">Shinigami Hoodie</p>
-        <p class="product-price">€49.99</p>
-      </div>
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Senpai Shirt" />
-        <p class="product-name">Senpai Shirt</p>
-        <p class="product-price">€24.99</p>
-		
+  <!-- Kategorien -->
+  <section class="category-section">
+    <div class="section-frame">
+      <h2 class="section-title">🧭 Kategorien</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <img src="images/kategorie-herren.jpg" alt="Herrenmode" />
+          <p>Herrenmode</p>
+        </div>
+        <div class="category-card">
+          <img src="images/kategorie-damen.jpg" alt="Damenmode" />
+          <p>Damenmode</p>
+        </div>
+        <div class="category-card">
+          <img src="images/kategorie-kinder.jpg" alt="Kinder" />
+          <p>Kinder</p>
+        </div>
+        <div class="category-card">
+          <img src="images/kategorie-special.jpg" alt="Anime Special" />
+          <p>Anime Special</p>
+        </div>
+        <div class="category-card">
+          <img src="images/kategorie-accessoires.jpg" alt="Accessoires" />
+          <p>Accessoires</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
- <!-- SALE Bereich -->
-<section class="product-section">
-  <div class="section-frame">
-    <h2 class="section-title">🔥 SALE 50% !! 🔥</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Sakura Tee" />
-        <p class="product-name">Sakura Tee</p>
-        <p class="product-price">€29.99</p>
-      </div>
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Shinigami Hoodie" />
-        <p class="product-name">Shinigami Hoodie</p>
-        <p class="product-price">€49.99</p>
-      </div>
-      <div class="product">
-        <img src="images/tanjiro.jpg" alt="Senpai Shirt" />
-        <p class="product-name">Senpai Shirt</p>
-        <p class="product-price">€24.99</p>
-      </div>
-	  <div class="product">
-        <img src="images/tanjiro.jpg" alt="Senpai Shirt" />
-        <p class="product-name">Senpai Shirt</p>
-        <p class="product-price">€24.99</p>
+  <!-- Bestseller -->
+  <section class="product-section">
+    <div class="section-frame">
+      <h2 class="section-title">🔥 BESTSELLER</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Sakura Tee" />
+          <p class="product-name">Sakura Tee</p>
+          <p class="product-price">€29.99</p>
+        </div>
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Shinigami Hoodie" />
+          <p class="product-name">Shinigami Hoodie</p>
+          <p class="product-price">€49.99</p>
+        </div>
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Senpai Shirt" />
+          <p class="product-name">Senpai Shirt</p>
+          <p class="product-price">€24.99</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- NEU -->
+  <section class="product-section">
+    <div class="section-frame">
+      <h2 class="section-title">🔥 NEU 🔥</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Sakura Tee" />
+          <p class="product-name">Sakura Tee</p>
+          <p class="product-price">€29.99</p>
+        </div>
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Shinigami Hoodie" />
+          <p class="product-name">Shinigami Hoodie</p>
+          <p class="product-price">€49.99</p>
+        </div>
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Senpai Shirt" />
+          <p class="product-name">Senpai Shirt</p>
+          <p class="product-price">€24.99</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- JavaScript für Slideshow -->
+  <!-- SALE -->
+  <section class="product-section">
+    <div class="section-frame">
+      <h2 class="section-title">🔥 SALE 🔥</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Sakura Tee" />
+          <p class="product-name">Sakura Tee</p>
+          <p class="product-price">€29.99</p>
+        </div>
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Shinigami Hoodie" />
+          <p class="product-name">Shinigami Hoodie</p>
+          <p class="product-price">€49.99</p>
+        </div>
+        <div class="product">
+          <img src="images/tanjiro.jpg" alt="Senpai Shirt" />
+          <p class="product-name">Senpai Shirt</p>
+          <p class="product-price">€24.99</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script>
+    // Slideshow
     let slideIndex = 0;
-    showSlides();
+    const slides = document.querySelectorAll(".slideshow-slide");
+
     function showSlides() {
-      let slides = document.querySelectorAll(".slide");
-      slides.forEach(slide => slide.style.display = "none");
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // 4 Sekunden pro Slide
+      slides.forEach((slide) => slide.classList.remove("active"));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
     }
+    slides[0].classList.add("active");
+    setInterval(showSlides, 5000);
+
+    // Dropdown Menü Klick für Mobile
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdownLink = document.querySelector('.dropdown > a');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+
+      dropdownLink.addEventListener('click', e => {
+        e.preventDefault();
+        if (dropdownMenu.style.display === 'block') {
+          dropdownMenu.style.display = 'none';
+        } else {
+          dropdownMenu.style.display = 'block';
+        }
+      });
+
+      // Optional: Klick außerhalb schließt das Dropdown
+      document.addEventListener('click', (e) => {
+        if (!dropdownLink.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.style.display = 'none';
+        }
+      });
+    });
   </script>
 
 </body>
 </html>
+s
