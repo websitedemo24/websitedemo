@@ -1286,6 +1286,83 @@
     border-bottom: 1px solid #eee;
     text-decoration: none;
 }
+
+
+/* Desktop Subsubmenu */
+.desktop-dropdown {
+    position: relative;
+}
+
+.desktop-submenu {
+    display: none;
+    background: white;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ccc;
+}
+.desktop-dropdown:hover .desktop-submenu {
+    display: block;
+}
+
+.desktop-dropdown:hover 
+.desktop-submenu {
+    display: none;
+    background: white;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ccc;
+}
+.desktop-dropdown:hover .desktop-submenu {
+    display: block;
+}
+
+.desktop-submenu li a {
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    color: #111;
+}
+.desktop-submenu li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mobile 3. Ebene */
+.mobile-subsubmenu {
+    display: none;
+    background: #f2f2f2;
+}
+.mobile-subsubmenu a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+.mobile-subsubmenu a:hover {
+    background-color: #e9e9e9;
+}
+.dropdown-toggle-sub {
+    background: none;
+    border: none;
+    color: #111;
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+
+.dropdown-menu,
+.desktop-submenu,
+.mobile-submenu,
+.mobile-subsubmenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 </style>
 </head>
 <body>
@@ -1294,7 +1371,14 @@
 <div class="mobile-dropdown">
 <button class="dropdown-toggle" onclick="toggleSubMenu()">Mode</button>
 <div class="mobile-submenu" id="mobileSubmenu">
-<a href="#">Herren</a>
+<div class="mobile-subgroup">
+<button class="dropdown-toggle-sub" onclick="toggleMobileSubSubMenu()">Herrenmode</button>
+<div class="mobile-subsubmenu" id="mobileSubSubmenu">
+<a href="#">T-Shirts</a>
+<a href="#">Jacken</a>
+<a href="#">Hosen</a>
+</div>
+</div>
 <a href="#">Damen</a>
 <a href="#">Kinder</a>
 </div>
@@ -1308,7 +1392,13 @@
 <nav class="side-navbar">
 <div class="side-logo">DemoShop</div>
 <ul class="side-menu">
-<li class="dropdown-mode"><a href="#">Mode</a><ul class="dropdown-menu"><li><a href="#">Herren</a></li><li><a href="#">Damen</a></li><li><a href="#">Kinder</a></li></ul></li>
+<li class="dropdown-mode"><a href="#">Mode</a><ul class="dropdown-menu"><li class="desktop-dropdown"><a href="#">Herren</a>
+<ul class="desktop-submenu">
+<li><a href="#">T-Shirts</a></li>
+<li><a href="#">Jacken</a></li>
+<li><a href="#">Hosen</a></li>
+</ul>
+</li><li><a href="#">Damen</a></li><li><a href="#">Kinder</a></li></ul></li>
 <li><a href="#">Neuheiten</a></li>
 <li><a href="#">Über uns</a></li>
 <li><a href="#">Stores</a></li>
@@ -1513,6 +1603,20 @@
 </div>
 </footer>
 <script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+function toggleSubMenu() {
+    const submenu = document.getElementById('mobileSubmenu');
+    submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+}
+function toggleMobileSubSubMenu() {
+    const sub = document.getElementById('mobileSubSubmenu');
+    sub.style.display = (sub.style.display === 'block') ? 'none' : 'block';
+}
+
+
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
