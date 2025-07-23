@@ -5,8 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>demo Shop - Moderne Mode für Alle</title>
-<style>
-        * {
+<style>* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -1105,53 +1104,117 @@
     object-fit: cover;
     display: block;
 }
+
+
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2000;
+    padding-top: 2rem;
+}
+
+.side-logo {
+    font-size: 1.8rem;
+    font-weight: 200;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #444;
+    text-shadow:
+        1px 1px 2px rgba(255, 255, 255, 0.8),
+        -1px -1px 1px rgba(0, 0, 0, 0.15);
+    background: transparent;
+    text-align: center;
+}
+
+.side-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.side-menu li {
+    width: 100%;
+}
+
+.side-menu a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.side-menu a:hover {
+    background: #f0f0f0;
+    border-left: 3px solid black;
+}
+
+/* Platz für Sidebar */
+.hero {
+    margin-left: 180px;
+}
+
+.dropdown-mode {
+    position: relative;
+}
+.dropdown-mode .dropdown-menu {
+    display: none;
+    position: relative;
+    background: white;
+    border-top: 1px solid #ccc;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.dropdown-mode:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu li a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: #111;
+    font-weight: 500;
+    text-align: left;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.dropdown-menu li a:hover {
+    background: #f0f0f0;
+    border-left: 3px solid var(--accent-color);
+}
 </style>
 </head>
 <body>
+<nav class="side-navbar">
+<div class="side-logo">DemoShop</div>
+<ul class="side-menu">
+<li class="dropdown-mode"><a href="#">Mode</a><ul class="dropdown-menu"><li><a href="#">Herren</a></li><li><a href="#">Damen</a></li><li><a href="#">Kinder</a></li></ul></li>
+<li><a href="#">Neuheiten</a></li>
+<li><a href="#">Über uns</a></li>
+<li><a href="#">Stores</a></li>
+<li><a href="#">Kontakt</a></li>
+<li><a href="#">🛒</a></li>
+</ul>
+</nav>
 <!-- Loading Screen -->
 <div class="loading" id="loading">
 <div class="spinner"></div>
 </div>
 <!-- Navigation -->
-<nav class="navbar">
-<div class="nav-container">
-<a class="logo" href="#">DemoShop</a>
-<ul class="nav-menu">
-<li class="nav-item">
-<a class="nav-link" href="#">Mode</a>
-<div class="dropdown">
-<div class="dropdown-item"><a href="#">Herren</a></div>
-<div class="dropdown-item"><a href="#">Damen</a></div>
-<div class="dropdown-item"><a href="#">Kinder</a></div>
-<div class="dropdown-item"><a href="#">Schuhe</a></div>
-</div>
-</li>
-<li class="nav-item"><a class="nav-link" href="#">Über uns</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
-</ul>
-<div class="cart-container">
-<button class="cart-btn" onclick="toggleCart()">
-                    🛒
-                    <span class="cart-count" id="cartCount">0</span>
-</button>
-<div class="cart-dropdown" id="cartDropdown">
-<div class="cart-header">
-<h3>Warenkorb</h3>
-</div>
-<div class="cart-items" id="cartItems">
-<p class="empty-cart">Ihr Warenkorb ist leer</p>
-</div>
-<div class="cart-footer">
-<div class="cart-total">
-<strong>Gesamt: <span id="cartTotal">0,00€</span></strong>
-<p class="free-shipping-note">✓ Kostenloser Versand</p>
-</div>
-<button class="checkout-btn" onclick="goToCheckout()">Zur Kasse</button>
-</div>
-</div>
-</div>
-</div>
-</nav>
 <!-- Hero Slideshow -->
 <section class="hero">
 <div class="slideshow-container">
@@ -1339,7 +1402,7 @@
 </div>
 </div>
 <div class="footer-bottom">
-<p>© 2025 DemoShop Alle Rechte vorbehalten. | Kostenloser Versand bei jeder Bestellung</p>
+<p>© 2025 StyleHub. Alle Rechte vorbehalten. | Kostenloser Versand bei jeder Bestellung</p>
 </div>
 </div>
 </footer>
