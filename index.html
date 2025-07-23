@@ -1363,6 +1363,20 @@
     padding: 0;
     margin: 0;
 }
+
+.desktop-dropdown {
+    position: relative;
+}
+.desktop-dropdown .desktop-submenu {
+    display: none;
+    background: white;
+    padding-left: 1rem;
+    border-left: 2px solid #ccc;
+    margin-left: 1rem;
+}
+.desktop-dropdown:hover .desktop-submenu {
+    display: block;
+}
 </style>
 </head>
 <body>
@@ -1379,8 +1393,22 @@
 <a href="#">Hosen</a>
 </div>
 </div>
-<a href="#">Damen</a>
-<a href="#">Kinder</a>
+<div class="mobile-subgroup">
+<button class="dropdown-toggle-sub" onclick="toggleMobileDamenSub()">Damenmode</button>
+<div class="mobile-subsubmenu" id="mobileDamenSubmenu">
+<a href="#">Blusen</a>
+<a href="#">Kleider</a>
+<a href="#">Schuhe</a>
+</div>
+</div>
+<div class="mobile-subgroup">
+<button class="dropdown-toggle-sub" onclick="toggleMobileKinderSub()">Kindermode</button>
+<div class="mobile-subsubmenu" id="mobileKinderSubmenu">
+<a href="#">Spielzeug</a>
+<a href="#">Mini-Shirts</a>
+<a href="#">Schuhe</a>
+</div>
+</div>
 </div>
 </div>
 <a href="#">Neuheiten</a>
@@ -1392,13 +1420,32 @@
 <nav class="side-navbar">
 <div class="side-logo">DemoShop</div>
 <ul class="side-menu">
-<li class="dropdown-mode"><a href="#">Mode</a><ul class="dropdown-menu"><li class="desktop-dropdown"><a href="#">Herren</a>
+<li class="dropdown-mode"><a href="#">Shop</a><ul class="dropdown-menu">
+<li class="desktop-dropdown">
+<a href="#">Herren</a>
 <ul class="desktop-submenu">
 <li><a href="#">T-Shirts</a></li>
 <li><a href="#">Jacken</a></li>
 <li><a href="#">Hosen</a></li>
 </ul>
-</li><li><a href="#">Damen</a></li><li><a href="#">Kinder</a></li></ul></li>
+</li>
+<li class="desktop-dropdown">
+<a href="#">Damen</a>
+<ul class="desktop-submenu">
+<li><a href="#">Blusen</a></li>
+<li><a href="#">Kleider</a></li>
+<li><a href="#">Schuhe</a></li>
+</ul>
+</li>
+<li class="desktop-dropdown">
+<a href="#">Kinder</a>
+<ul class="desktop-submenu">
+<li><a href="#">Spielzeug</a></li>
+<li><a href="#">Mini-Shirts</a></li>
+<li><a href="#">Schuhe</a></li>
+</ul>
+</li>
+</ul></li>
 <li><a href="#">Neuheiten</a></li>
 <li><a href="#">Über uns</a></li>
 <li><a href="#">Stores</a></li>
@@ -1603,6 +1650,28 @@
 </div>
 </footer>
 <script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+function toggleSubMenu() {
+    const submenu = document.getElementById('mobileSubmenu');
+    submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+}
+function toggleMobileSubSubMenu() {
+    const sub = document.getElementById('mobileSubSubmenu');
+    sub.style.display = (sub.style.display === 'block') ? 'none' : 'block';
+}
+function toggleMobileDamenSub() {
+    const sub = document.getElementById('mobileDamenSubmenu');
+    sub.style.display = (sub.style.display === 'block') ? 'none' : 'block';
+}
+function toggleMobileKinderSub() {
+    const sub = document.getElementById('mobileKinderSubmenu');
+    sub.style.display = (sub.style.display === 'block') ? 'none' : 'block';
+}
+
+
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
