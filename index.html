@@ -1383,37 +1383,8 @@
 <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">☰ Menü</button>
 <nav class="mobile-menu" id="mobileMenu">
 <div class="mobile-dropdown">
-<button class="dropdown-toggle" onclick="toggleSubMenu()">Mode</button>
-<div class="mobile-submenu" id="mobileSubmenu">
-<div class="mobile-subgroup">
-<button class="dropdown-toggle-sub" onclick="toggleMobileSubSubMenu()">Herrenmode</button>
-<div class="mobile-subsubmenu" id="mobileSubSubmenu">
-<a href="#">T-Shirts</a>
-<a href="#">Sneaker</a>
-<a href="#">Hosen</a>
-</div>
-</div>
-<div class="mobile-subgroup">
-<button class="dropdown-toggle-sub" onclick="toggleMobileDamenSub()">Damenmode</button>
-<div class="mobile-subsubmenu" id="mobileDamenSubmenu">
-<a href="#">Blusen</a>
-<a href="#">T-Shirts</a>
-<a href="#">Kleider</a>
-<a href="#">Tang-Top</a>
-<a href="#">Kurzarmshirt</a>
-<a href="#">dreiteiliger</a>
-<a href="#">Fleece</a>
-</div>
-</div>
-<div class="mobile-subgroup">
-<button class="dropdown-toggle-sub" onclick="toggleMobileKinderSub()">Kindermode</button>
-<div class="mobile-subsubmenu" id="mobileKinderSubmenu">
-<a href="#">Spielzeug</a>
-<a href="#">Mini-Shirts</a>
-<a href="#">Schuhe</a>
-</div>
-</div>
-</div>
+<button class="dropdown-toggle" onclick="toggleSubMenu()">SHOP KLEIDUNG</button>
+<div class="mobile-submenu" id="mobileSubmenu"><div class="mobile-subgroup"><button class="dropdown-toggle-sub" onclick="toggleMobileSubMenu('mobileSub_herren')">HERREN</button><div class="mobile-subsubmenu" id="mobileSub_herren"><a href="#">T-SHIRTS</a><a href="#">SNEAKER</a></div></div><div class="mobile-subgroup"><button class="dropdown-toggle-sub" onclick="toggleMobileSubMenu('mobileSub_damen')">DAMEN</button><div class="mobile-subsubmenu" id="mobileSub_damen"><a href="#">BLUSEN</a><a href="#">KLEIDER</a><a href="#">TANG-TOP</a><a href="#">T-SHIRTS</a><a href="#">KURZARMSHIRT</a><a href="#">FLEECE</a><a href="#">DREITEILIGER</a></div></div></div>
 </div>
 <a href="#">Neuheiten</a>
 <a href="#">Über uns</a>
@@ -1656,6 +1627,16 @@ KISSENBEZUG</a></li>
 </div>
 </footer>
 <script>
+function toggleMobileSubMenu(id) {
+    const el = document.getElementById(id);
+    if (el.style.display === 'block') {
+        el.style.display = 'none';
+    } else {
+        el.style.display = 'block';
+    }
+}
+
+
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
