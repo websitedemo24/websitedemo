@@ -1196,9 +1196,79 @@
     background: #f0f0f0;
     border-left: 3px solid var(--accent-color);
 }
+
+
+/* Mobile Menü sichtbar bei kleinen Displays */
+.mobile-nav-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .side-navbar {
+        display: none !important;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 3000;
+        background: var(--accent-color);
+        color: white;
+        padding: 0.6rem 1rem;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 2500;
+        text-align: center;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #111;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .mobile-menu a:hover {
+        background: #f0f0f0;
+    }
+
+    .hero {
+        margin-left: 0 !important;
+    }
+}
 </style>
 </head>
 <body>
+<button class="mobile-nav-toggle" onclick="toggleMobileMenu()">☰ Menü</button>
+<nav class="mobile-menu" id="mobileMenu">
+<a href="#">Mode</a>
+<a href="#">Neuheiten</a>
+<a href="#">Über uns</a>
+<a href="#">Stores</a>
+<a href="#">Kontakt</a>
+<a href="#">🛒</a>
+</nav>
+
 <nav class="side-navbar">
 <div class="side-logo">DemoShop</div>
 <ul class="side-menu">
@@ -1407,6 +1477,16 @@
 </div>
 </footer>
 <script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+}
+
+
         // Loading Screen
         window.addEventListener('load', function() {
             setTimeout(() => {
