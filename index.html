@@ -1256,19 +1256,52 @@
         margin-left: 0 !important;
     }
 }
+
+
+.mobile-submenu {
+    display: none;
+    background: #f9f9f9;
+    border-top: 1px solid #ccc;
+}
+.mobile-submenu a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+}
+.mobile-submenu a:hover {
+    background-color: #efefef;
+}
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+}
 </style>
 </head>
 <body>
 <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">☰ Menü</button>
 <nav class="mobile-menu" id="mobileMenu">
-<a href="#">Mode</a>
+<div class="mobile-dropdown">
+<button class="dropdown-toggle" onclick="toggleSubMenu()">Mode</button>
+<div class="mobile-submenu" id="mobileSubmenu">
+<a href="#">Herren</a>
+<a href="#">Damen</a>
+<a href="#">Kinder</a>
+</div>
+</div>
 <a href="#">Neuheiten</a>
 <a href="#">Über uns</a>
 <a href="#">Stores</a>
 <a href="#">Kontakt</a>
 <a href="#">🛒</a>
 </nav>
-
 <nav class="side-navbar">
 <div class="side-logo">DemoShop</div>
 <ul class="side-menu">
@@ -1477,6 +1510,17 @@
 </div>
 </footer>
 <script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+
+function toggleSubMenu() {
+    const submenu = document.getElementById('mobileSubmenu');
+    submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+}
+
+
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
     if (menu.style.display === 'block') {
